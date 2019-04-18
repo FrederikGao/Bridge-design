@@ -28,6 +28,9 @@ namespace Bridge_design
         public static double l1;
         public static double l2;
         public static double l3;
+        public static double l0;
+        public static double t;
+
         public void Middle_beam_left_building(ExternalCommandData commandData)
         {
             UIDocument uidoc = commandData.Application.ActiveUIDocument;
@@ -370,51 +373,51 @@ namespace Bridge_design
             #endregion
 
             #region 定义各部分元素名称
-            Element Model1_z = null;
-            Element Model1_y = null;
-            Element Model2_z = null;
-            Element Model2_y = null;
-            Element Model3_z = null;
-            Element Model3_y = null;
-            Element Model4_z = null;
-            Element Model4_y = null;
-            Element Model5_z = null;
-            Element Model5_y = null;
+            Element Middlebeam1_z = null;
+            Element Middlebeam1_y = null;
+            Element Middlebeam2_z = null;
+            Element Middlebeam2_y = null;
+            Element Middlebeam3_z = null;
+            Element Middlebeam3_y = null;
+            Element Middlebeam4_z = null;
+            Element Middlebeam4_y = null;
+            Element Middlebeam5_z = null;
+            Element Middlebeam5_y = null;
             #endregion
 
             #region 主梁的拉伸和融合
             //新建事务，创建主梁部分拉伸体
-            using (Transaction transaction1 = new Transaction(familyDoc))
+            using (Transaction Mainbeam_stretching = new Transaction(familyDoc))
             {
-                if (transaction1.Start("拉伸") == TransactionStatus.Started)
-                    Model1_z = familyDoc.FamilyCreate.NewExtrusion(true, bubufen1_z, SketchPlane.Create(familyDoc, Plane.CreateByNormalAndOrigin(XYZ.BasisY, XYZ.Zero)), l1);
-                    Model1_y = familyDoc.FamilyCreate.NewExtrusion(true, bubufen1_y, SketchPlane.Create(familyDoc, Plane.CreateByNormalAndOrigin(XYZ.BasisY, XYZ.Zero)), l1);
-                    Model3_z = familyDoc.FamilyCreate.NewExtrusion(true, bubufen2_z, SketchPlane.Create(familyDoc, Plane.CreateByNormalAndOrigin(XYZ.BasisY, XYZ.Zero)), l3);
-                    Model3_y = familyDoc.FamilyCreate.NewExtrusion(true, bubufen2_y, SketchPlane.Create(familyDoc, Plane.CreateByNormalAndOrigin(XYZ.BasisY, XYZ.Zero)), l3);
-                    Model5_z = familyDoc.FamilyCreate.NewExtrusion(true, bubufen1_z, SketchPlane.Create(familyDoc, Plane.CreateByNormalAndOrigin(XYZ.BasisY, XYZ.Zero)), l1);
-                    Model5_y = familyDoc.FamilyCreate.NewExtrusion(true, bubufen1_y, SketchPlane.Create(familyDoc, Plane.CreateByNormalAndOrigin(XYZ.BasisY, XYZ.Zero)), l1);
+                if (Mainbeam_stretching.Start("主梁拉伸") == TransactionStatus.Started)
+                Middlebeam1_z = familyDoc.FamilyCreate.NewExtrusion(true, bubufen1_z, SketchPlane.Create(familyDoc, Plane.CreateByNormalAndOrigin(XYZ.BasisY, XYZ.Zero)), l1);
+                Middlebeam1_y = familyDoc.FamilyCreate.NewExtrusion(true, bubufen1_y, SketchPlane.Create(familyDoc, Plane.CreateByNormalAndOrigin(XYZ.BasisY, XYZ.Zero)), l1);
+                Middlebeam3_z = familyDoc.FamilyCreate.NewExtrusion(true, bubufen2_z, SketchPlane.Create(familyDoc, Plane.CreateByNormalAndOrigin(XYZ.BasisY, XYZ.Zero)), l3);
+                Middlebeam3_y = familyDoc.FamilyCreate.NewExtrusion(true, bubufen2_y, SketchPlane.Create(familyDoc, Plane.CreateByNormalAndOrigin(XYZ.BasisY, XYZ.Zero)), l3);
+                Middlebeam5_z = familyDoc.FamilyCreate.NewExtrusion(true, bubufen1_z, SketchPlane.Create(familyDoc, Plane.CreateByNormalAndOrigin(XYZ.BasisY, XYZ.Zero)), l1);
+                Middlebeam5_y = familyDoc.FamilyCreate.NewExtrusion(true, bubufen1_y, SketchPlane.Create(familyDoc, Plane.CreateByNormalAndOrigin(XYZ.BasisY, XYZ.Zero)), l1);
 
                 //移动部分5到正确位置
-                XYZ transPointModel5 = new XYZ(0, 2 * l2 + l3, 0);
-                ElementTransformUtils.MoveElement(familyDoc, Model5_z.Id, transPointModel5);
-                ElementTransformUtils.MoveElement(familyDoc, Model5_y.Id, transPointModel5);
-                transaction1.Commit();
+                XYZ transPointModel5 = new XYZ(0, l1 + 2 * l2 + l3, 0);
+                ElementTransformUtils.MoveElement(familyDoc, Middlebeam5_z.Id, transPointModel5);
+                ElementTransformUtils.MoveElement(familyDoc, Middlebeam5_y.Id, transPointModel5);
+                Mainbeam_stretching.Commit();
             }
 
             //新建事务，创造主梁部分融合体
-            using (Transaction transaction2 = new Transaction(familyDoc))
+            using (Transaction Mainbeam_lofting = new Transaction(familyDoc))
             {
-                if (transaction2.Start("融合") == TransactionStatus.Started)
-                    Model2_z = familyDoc.FamilyCreate.NewBlend(true, bufen2_jz, bufen2_z, SketchPlane.Create(familyDoc, Plane.CreateByNormalAndOrigin(new XYZ(0, -1, 0), XYZ.Zero)));
-                    Model2_y = familyDoc.FamilyCreate.NewBlend(true, bufen2_jy, bufen2_y, SketchPlane.Create(familyDoc, Plane.CreateByNormalAndOrigin(new XYZ(0, 1, 0), XYZ.Zero)));
-                    Model4_z = familyDoc.FamilyCreate.NewBlend(true, bufen2_jz, bufen2_z, SketchPlane.Create(familyDoc, Plane.CreateByNormalAndOrigin(new XYZ(0, -1, 0), XYZ.Zero)));
-                    Model4_y = familyDoc.FamilyCreate.NewBlend(true, bufen2_jy, bufen2_y, SketchPlane.Create(familyDoc, Plane.CreateByNormalAndOrigin(new XYZ(0, 1, 0), XYZ.Zero)));
+                if (Mainbeam_lofting.Start("主梁融合") == TransactionStatus.Started)
+                Middlebeam2_z = familyDoc.FamilyCreate.NewBlend(true, bufen2_jz, bufen2_z, SketchPlane.Create(familyDoc, Plane.CreateByNormalAndOrigin(new XYZ(0, -1, 0), XYZ.Zero)));
+                Middlebeam2_y = familyDoc.FamilyCreate.NewBlend(true, bufen2_jy, bufen2_y, SketchPlane.Create(familyDoc, Plane.CreateByNormalAndOrigin(new XYZ(0, 1, 0), XYZ.Zero)));
+                Middlebeam4_z = familyDoc.FamilyCreate.NewBlend(true, bufen2_jz, bufen2_z, SketchPlane.Create(familyDoc, Plane.CreateByNormalAndOrigin(new XYZ(0, -1, 0), XYZ.Zero)));
+                Middlebeam4_y = familyDoc.FamilyCreate.NewBlend(true, bufen2_jy, bufen2_y, SketchPlane.Create(familyDoc, Plane.CreateByNormalAndOrigin(new XYZ(0, 1, 0), XYZ.Zero)));
 
                 //移动部分4到正确的位置
                 XYZ transPointModel4 = new XYZ(0, l2 + l3, 0);
-                ElementTransformUtils.MoveElement(familyDoc, Model4_z.Id, transPointModel4);
-                ElementTransformUtils.MoveElement(familyDoc, Model4_y.Id, transPointModel4);
-                transaction2.Commit();
+                ElementTransformUtils.MoveElement(familyDoc, Middlebeam4_z.Id, transPointModel4);
+                ElementTransformUtils.MoveElement(familyDoc, Middlebeam4_y.Id, transPointModel4);
+                Mainbeam_lofting.Commit();
             }
             #endregion
 
@@ -478,6 +481,56 @@ namespace Bridge_design
             Transverse_y.Append(Tb_outline_y5);
             Transversebeam_y.Append(Transverse_y);
 
+            #region 横隔梁位置信息处理
+            double x1 = l0;
+            double x3 = (2 * l1 + 2 * l2 + l3) / 2 - (t / 2);
+            double x5 = 2 * l1 + 2 * l2 + l3 - l0 - t;
+            double x2 = (x1 + x3) / 2;
+            double x4 = (x3 + x5) / 2;
+            #endregion
+
+            #region  定义横隔梁部分元素名称
+            Element Transversebeam1_z = null;
+            Element Transversebeam1_y = null;
+            Element Transversebeam2_z = null;
+            Element Transversebeam2_y = null;
+            Element Transversebeam3_z = null;
+            Element Transversebeam3_y = null;
+            Element Transversebeam4_z = null;
+            Element Transversebeam4_y = null;
+            Element Transversebeam5_z = null;
+            Element Transversebeam5_y = null;
+            #endregion
+
+            using (Transaction Transversebeam_stretching = new Transaction(familyDoc))
+            {
+                if (Transversebeam_stretching.Start("横隔梁拉伸") == TransactionStatus.Started)
+                //左边的横隔梁拉伸
+                Transversebeam1_z = familyDoc.FamilyCreate.NewExtrusion(true, Transversebeam_z, SketchPlane.Create(familyDoc, Plane.CreateByNormalAndOrigin(XYZ.BasisY, XYZ.Zero)), t);
+                Transversebeam2_z = familyDoc.FamilyCreate.NewExtrusion(true, Transversebeam_z, SketchPlane.Create(familyDoc, Plane.CreateByNormalAndOrigin(XYZ.BasisY, XYZ.Zero)), t);
+                Transversebeam3_z = familyDoc.FamilyCreate.NewExtrusion(true, Transversebeam_z, SketchPlane.Create(familyDoc, Plane.CreateByNormalAndOrigin(XYZ.BasisY, XYZ.Zero)), t);
+                Transversebeam4_z = familyDoc.FamilyCreate.NewExtrusion(true, Transversebeam_z, SketchPlane.Create(familyDoc, Plane.CreateByNormalAndOrigin(XYZ.BasisY, XYZ.Zero)), t);
+                Transversebeam5_z = familyDoc.FamilyCreate.NewExtrusion(true, Transversebeam_z, SketchPlane.Create(familyDoc, Plane.CreateByNormalAndOrigin(XYZ.BasisY, XYZ.Zero)), t);
+                Transversebeam1_y = familyDoc.FamilyCreate.NewExtrusion(true, Transversebeam_y, SketchPlane.Create(familyDoc, Plane.CreateByNormalAndOrigin(XYZ.BasisY, XYZ.Zero)), t);
+                Transversebeam2_y = familyDoc.FamilyCreate.NewExtrusion(true, Transversebeam_y, SketchPlane.Create(familyDoc, Plane.CreateByNormalAndOrigin(XYZ.BasisY, XYZ.Zero)), t);
+                Transversebeam3_y = familyDoc.FamilyCreate.NewExtrusion(true, Transversebeam_y, SketchPlane.Create(familyDoc, Plane.CreateByNormalAndOrigin(XYZ.BasisY, XYZ.Zero)), t);
+                Transversebeam4_y = familyDoc.FamilyCreate.NewExtrusion(true, Transversebeam_y, SketchPlane.Create(familyDoc, Plane.CreateByNormalAndOrigin(XYZ.BasisY, XYZ.Zero)), t);
+                Transversebeam5_y = familyDoc.FamilyCreate.NewExtrusion(true, Transversebeam_y, SketchPlane.Create(familyDoc, Plane.CreateByNormalAndOrigin(XYZ.BasisY, XYZ.Zero)), t);
+
+
+                //移动到正确的位置
+                ElementTransformUtils.MoveElement(familyDoc, Transversebeam1_z.Id, new XYZ(0, x1, 0));
+                ElementTransformUtils.MoveElement(familyDoc, Transversebeam2_z.Id, new XYZ(0, x2, 0));
+                ElementTransformUtils.MoveElement(familyDoc, Transversebeam3_z.Id, new XYZ(0, x3, 0));
+                ElementTransformUtils.MoveElement(familyDoc, Transversebeam4_z.Id, new XYZ(0, x4, 0));
+                ElementTransformUtils.MoveElement(familyDoc, Transversebeam5_z.Id, new XYZ(0, x5, 0));
+                ElementTransformUtils.MoveElement(familyDoc, Transversebeam1_y.Id, new XYZ(0, x1, 0));
+                ElementTransformUtils.MoveElement(familyDoc, Transversebeam2_y.Id, new XYZ(0, x2, 0));
+                ElementTransformUtils.MoveElement(familyDoc, Transversebeam3_y.Id, new XYZ(0, x3, 0));
+                ElementTransformUtils.MoveElement(familyDoc, Transversebeam4_y.Id, new XYZ(0, x4, 0));
+                ElementTransformUtils.MoveElement(familyDoc, Transversebeam5_y.Id, new XYZ(0, x5, 0));
+                Transversebeam_stretching.Commit();
+            }
             #endregion
 
             Family family = familyDoc.LoadFamily(Rdoc);

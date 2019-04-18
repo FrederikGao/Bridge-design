@@ -50,7 +50,7 @@ namespace Bridge_design
             //高度方向的跨中的中梁的外轮廓线的坐标数组倒过来
             for (i = 0; i < z_kz_bl_out.Length; i++)
             {
-                z_kz_zl_out[i] = -Windows_Canvas.h_kz_zl_out[i];32
+                z_kz_zl_out[i] = -Windows_Canvas.h_kz_zl_out[i];
             }
             //宽度方向的跨中的中梁的内轮廓线的坐标数组倒过来
             for (i = 0; i < z_kz_zl_in.Length; i++)

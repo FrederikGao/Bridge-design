@@ -183,6 +183,8 @@ namespace Bridge_design
             this.l1.Text = 50.ToString();
             this.l2.Text = 150.ToString();
             this.l3.Text = 2600.ToString();
+            this.l0.Text = 30.ToString();
+            this.t.Text = 20.ToString();
         }
 
         /// <summary>
@@ -838,6 +840,24 @@ namespace Bridge_design
             else
             {
                 ThreeD_Building.l3 = Convert.ToSingle(l3.Text);
+            }
+            if (l0.Text == "")
+            {
+                l0.Text = "0";
+                ThreeD_Building.l0 = 0;
+            }
+            else
+            {
+                ThreeD_Building.l0 = Convert.ToSingle(l0.Text);
+            }
+            if (t.Text == "")
+            {
+                t.Text = "0";
+                ThreeD_Building.t = 0;
+            }
+            else
+            {
+                ThreeD_Building.t = Convert.ToSingle(t.Text);
             }
         }
 

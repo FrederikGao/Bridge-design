@@ -109,23 +109,29 @@
                     <Label Content="支点边梁尺寸拟定示意图" HorizontalAlignment="Left" Margin="670,441,0,0" VerticalAlignment="Top" Height="24" Width="145" Grid.Column="1"/>
 
                     <Label Content="支点尺寸标注示意图" HorizontalAlignment="Left" Margin="469,478,0,0" VerticalAlignment="Top" Height="24" Width="119" Grid.Column="1"/>
-                    <Image Source="E:\Bridge design(2019.01.05)\Bridge design\zhongliang.jpg" HorizontalAlignment="Left" Height="146" Margin="42,338,0,0" VerticalAlignment="Top" Width="206" Grid.ColumnSpan="2"/>
-                    <Image Source="E:\Bridge design(2019.01.05)\Bridge design\zhongliang.jpg" HorizontalAlignment="Left" Height="146" Margin="421,338,0,0" VerticalAlignment="Top" Width="206" Grid.Column="1"/>
+                    <Image Source="E:\Bridge_design\Bridge design\zhongliang.jpg" HorizontalAlignment="Left" Height="146" Margin="42,338,0,0" VerticalAlignment="Top" Width="206" Grid.ColumnSpan="2"/>
+                    <Image Source="E:\Bridge_design\Bridge design\zhongliang.jpg" HorizontalAlignment="Left" Height="146" Margin="421,338,0,0" VerticalAlignment="Top" Width="206" Grid.Column="1"/>
                 </Grid>
             </TabItem>
             <TabItem Header="纵立面尺寸输入">
                 <Grid Background="White">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="17*"/>
-                        <ColumnDefinition Width="314*"/>
+                        <ColumnDefinition Width="18*"/>
+                        <ColumnDefinition Width="545*"/>
                     </Grid.ColumnDefinitions>
-                    <Label Content="纵立面尺寸输入" HorizontalAlignment="Left" Margin="42,9,0,0" VerticalAlignment="Top" Height="23" Width="113" Grid.ColumnSpan="2"/>
-                    <Label Content="L1=" HorizontalAlignment="Left" Margin="53,34,0,0" VerticalAlignment="Top" Height="24" Grid.ColumnSpan="2"/>
-                    <TextBox Name="l1" Tag="" HorizontalAlignment="Left" Margin="22,38,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
-                    <Label Content="L2=" HorizontalAlignment="Left" Margin="53,59,0,0" VerticalAlignment="Top" Height="24" Grid.ColumnSpan="2"/>
-                    <TextBox Name="l2" Tag="" HorizontalAlignment="Left" Margin="22,63,0,0" TextWrapping="Wrap" Text="150" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
-                    <Label Content="L3=" HorizontalAlignment="Left" Margin="53,84,0,0" VerticalAlignment="Top" Height="24" Grid.ColumnSpan="2"/>
-                    <TextBox Name="l3" Tag="" HorizontalAlignment="Left" Margin="22,88,0,0" TextWrapping="Wrap" Text="2600" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
+                    <Label Content="纵立面尺寸输入" HorizontalAlignment="Left" Margin="0,9,0,0" VerticalAlignment="Top" Height="23" Width="113" Grid.Column="1"/>
+                    <Label Content="横隔梁厚度及与梁端距离输入" HorizontalAlignment="Left" Margin="0,73,0,0" VerticalAlignment="Top" Height="23" Width="169" Grid.Column="1"/>
+                    <Label Content="L1=" HorizontalAlignment="Left" Margin="2,34,0,0" VerticalAlignment="Top" Height="24" Grid.Column="1" Width="32"/>
+                    <TextBox Name="l1" Tag="" HorizontalAlignment="Left" Margin="28,38,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="61" Grid.Column="1" Height="17"/>
+                    <Label Content="L2=" HorizontalAlignment="Left" Margin="149,34,0,0" VerticalAlignment="Top" Height="24" Grid.Column="1" Width="32"/>
+                    <TextBox Name="l2" Tag="" HorizontalAlignment="Left" Margin="175,38,0,0" TextWrapping="Wrap" Text="150" VerticalAlignment="Top" Width="61" Grid.Column="1" Height="17"/>
+                    <Label Content="L3=" HorizontalAlignment="Left" Margin="303,34,0,0" VerticalAlignment="Top" Height="24" Grid.Column="1" Width="32"/>
+                    <TextBox Name="l3" Tag="" HorizontalAlignment="Left" Margin="329,38,0,0" TextWrapping="Wrap" Text="2600" VerticalAlignment="Top" Width="61" Grid.Column="1" Height="17"/>
+                    <Image Source="E:\Bridge_design\Bridge design\zonglimian.jpg" Height="171" Margin="0,146,10,0" VerticalAlignment="Top" RenderTransformOrigin="0.492,-0.081" HorizontalAlignment="Right" Width="1106" Grid.ColumnSpan="2"/>
+                    <Label Content="L0=" HorizontalAlignment="Left" Margin="2,99,0,0" VerticalAlignment="Top" Height="24" Grid.Column="1" Width="32"/>
+                    <TextBox Name="l0" Tag="" HorizontalAlignment="Left" Margin="29,103,0,0" TextWrapping="Wrap" Text="30" VerticalAlignment="Top" Width="61" Grid.Column="1" Height="17"/>
+                    <Label Content="t=" HorizontalAlignment="Left" Margin="149,99,0,0" VerticalAlignment="Top" Height="24" Grid.Column="1" Width="32"/>
+                    <TextBox Name="t" Tag="" HorizontalAlignment="Left" Margin="166,103,0,0" TextWrapping="Wrap" Text="20" VerticalAlignment="Top" Width="61" Grid.Column="1" Height="17"/>
                 </Grid>
             </TabItem>
         </TabControl>

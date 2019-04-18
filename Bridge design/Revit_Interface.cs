@@ -26,11 +26,11 @@ namespace Bridge_design
             RibbonPanel ribbonPanel = application.CreateRibbonPanel("Bridge_design");
 
             //在Revit中创建一个新的按钮，并且依次给它：区块名，按钮名，dll文件地址，要运行的类名
-            PushButtonData buttonData = new PushButtonData("Bridge_design", "尺寸输入及建模", @"E:\Bridge design(2019.01.05)\Bridge design\bin\Debug\Bridge design.dll", "Bridge_design.Revit_Interface");
+            PushButtonData buttonData = new PushButtonData("Bridge_design", "尺寸输入及建模", @"E:\Bridge_design\Bridge design\bin\Debug\Bridge design.dll", "Bridge_design.Revit_Interface");
             PushButton pushButton = ribbonPanel.AddItem(buttonData) as PushButton;
 
             //给按钮添加一个图片，并且说明图片的地址
-            Uri uriImage = new Uri(@"E:\Bridge design(2019.01.05)\Bridge design\GJX.jpg");
+            Uri uriImage = new Uri(@"E:\Bridge_design\Bridge design\GJX.jpg");
             BitmapImage largeImage = new BitmapImage(uriImage);
             pushButton.LargeImage = largeImage;
             pushButton.ToolTip = "欢迎来到Revit";

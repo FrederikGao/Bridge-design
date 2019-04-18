@@ -213,3 +213,82 @@ E:\Bridge design(2019.01.05)\Bridge design\bin\Debug\ru-RU\AdWindows.resources.d
 E:\Bridge design(2019.01.05)\Bridge design\bin\Debug\zh-CN\AdWindows.resources.dll
 E:\Bridge design(2019.01.05)\Bridge design\bin\Debug\zh-TW\AdWindows.resources.dll
 E:\Bridge design(2019.01.05)\Bridge design\obj\Debug\Bridge design.csprojAssemblyReference.cache
+E:\Bridge_design\Bridge design\obj\Debug\Bridge design.csprojAssemblyReference.cache
+E:\Bridge_design\Bridge design\obj\Debug\Bridge design.csproj.ResolveComReference.cache
+E:\Bridge_design\Bridge design\obj\Debug\Cross section size.g.cs
+E:\Bridge_design\Bridge design\obj\Debug\Bridge design_MarkupCompile.cache
+E:\Bridge_design\Bridge design\obj\Debug\Bridge design_MarkupCompile.lref
+E:\Bridge_design\Bridge design\obj\Debug\Bridge design.dll
+E:\Bridge_design\Bridge design\obj\Debug\Bridge design.pdb
+E:\Bridge_design\Bridge design\bin\Debug\Bridge design.dll
+E:\Bridge_design\Bridge design\bin\Debug\Bridge design.pdb
+E:\Bridge_design\Bridge design\bin\Debug\RevitAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\RevitAPIUI.dll
+E:\Bridge_design\Bridge design\bin\Debug\RevitAPIFoundation.dll
+E:\Bridge_design\Bridge design\bin\Debug\RevitDBAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\PersistenceDBAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\UtilityAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\APIDBAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\GraphicsAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\ElementGroupDBAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\EssentialsDBAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\GeomUtilAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\FamilyDBAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\DetailDBAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\CurtainGridFamilyDBAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\ArrayElemsDBAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\EnergyAnalysisDBAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\BuildingSystemsDBAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\HostObjDBAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\RoomAreaPlanDBAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\SiteDBAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\SculptingDBAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\StructuralDBAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\InterfaceAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\InterfaceUtilAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\RebarDBAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\StructuralAnalysisDBAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\MassingDBAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\AssemblyDBAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\DPartDBAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\NumberingDBAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\PointCloudAccessAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\StairRampDBAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\AnalysisAppsDBAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\DBManagedServices.dll
+E:\Bridge_design\Bridge design\bin\Debug\AdWindows.dll
+E:\Bridge_design\Bridge design\bin\Debug\RevitAddInUtility.dll
+E:\Bridge_design\Bridge design\bin\Debug\APIInterop.dll
+E:\Bridge_design\Bridge design\bin\Debug\UIFramework.dll
+E:\Bridge_design\Bridge design\bin\Debug\AddInManager.dll
+E:\Bridge_design\Bridge design\bin\Debug\RevitUIAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\BuildingSystemsUIAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\DesktopMFCAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\APIUIAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\RevitMFCAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\EssentialsUIAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\EnergyAnalysisUtilitiesAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\DetailUIAPI.dll
+E:\Bridge_design\Bridge design\bin\Debug\UIFrameworkServices.dll
+E:\Bridge_design\Bridge design\bin\Debug\ManagedMC3.dll
+E:\Bridge_design\Bridge design\bin\Debug\Xceed.Wpf.AvalonDock.dll
+E:\Bridge_design\Bridge design\bin\Debug\RevitAPI.xml
+E:\Bridge_design\Bridge design\bin\Debug\RevitAPIUI.xml
+E:\Bridge_design\Bridge design\bin\Debug\cs-CZ\AdWindows.resources.dll
+E:\Bridge_design\Bridge design\bin\Debug\de-DE\AdWindows.resources.dll
+E:\Bridge_design\Bridge design\bin\Debug\en-GB\AdWindows.resources.dll
+E:\Bridge_design\Bridge design\bin\Debug\en-US\AdWindows.resources.dll
+E:\Bridge_design\Bridge design\bin\Debug\es-ES\AdWindows.resources.dll
+E:\Bridge_design\Bridge design\bin\Debug\fr-FR\AdWindows.resources.dll
+E:\Bridge_design\Bridge design\bin\Debug\it-IT\AdWindows.resources.dll
+E:\Bridge_design\Bridge design\bin\Debug\ja-JP\AdWindows.resources.dll
+E:\Bridge_design\Bridge design\bin\Debug\ko-KR\AdWindows.resources.dll
+E:\Bridge_design\Bridge design\bin\Debug\pl-PL\AdWindows.resources.dll
+E:\Bridge_design\Bridge design\bin\Debug\pt-BR\AdWindows.resources.dll
+E:\Bridge_design\Bridge design\bin\Debug\ru-RU\AdWindows.resources.dll
+E:\Bridge_design\Bridge design\bin\Debug\zh-CN\AdWindows.resources.dll
+E:\Bridge_design\Bridge design\bin\Debug\zh-TW\AdWindows.resources.dll
+E:\Bridge_design\Bridge design\obj\Debug\Cross section size.baml
+E:\Bridge_design\Bridge design\obj\Debug\Bridge design.g.resources
+E:\Bridge_design\Bridge design\obj\Debug\Bridge design.csproj.CoreCompileInputs.cache
+E:\Bridge_design\Bridge design\obj\Debug\Bridge design.csproj.CopyComplete
