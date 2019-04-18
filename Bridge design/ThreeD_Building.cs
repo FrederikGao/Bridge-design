@@ -505,7 +505,7 @@ namespace Bridge_design
             using (Transaction Transversebeam_stretching = new Transaction(familyDoc))
             {
                 if (Transversebeam_stretching.Start("横隔梁拉伸") == TransactionStatus.Started)
-                //左边的横隔梁拉伸
+                //左边的横隔梁拉伸1
                 Transversebeam1_z = familyDoc.FamilyCreate.NewExtrusion(true, Transversebeam_z, SketchPlane.Create(familyDoc, Plane.CreateByNormalAndOrigin(XYZ.BasisY, XYZ.Zero)), t);
                 Transversebeam2_z = familyDoc.FamilyCreate.NewExtrusion(true, Transversebeam_z, SketchPlane.Create(familyDoc, Plane.CreateByNormalAndOrigin(XYZ.BasisY, XYZ.Zero)), t);
                 Transversebeam3_z = familyDoc.FamilyCreate.NewExtrusion(true, Transversebeam_z, SketchPlane.Create(familyDoc, Plane.CreateByNormalAndOrigin(XYZ.BasisY, XYZ.Zero)), t);
