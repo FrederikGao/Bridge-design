@@ -43,6 +43,7 @@ namespace Bridge_design
             Transaction familyTrans = new Transaction(familyDoc, "family");
             //familyDoc.FamilyManager.NewType("1");
 
+            #region 定义主梁轮廓线与轮廓线连接
             //定义部分1左半边轮廓线与轮廓线连接
             CurveArrArray bubufen1_z = app.Create.NewCurveArrArray();
             CurveArray bufen1_z = app.Create.NewCurveArray();
@@ -66,7 +67,9 @@ namespace Bridge_design
             //定义部分2右半边轮廓线与轮廓线连接
             CurveArrArray bubufen2_y = app.Create.NewCurveArrArray();
             CurveArray bufen2_y = app.Create.NewCurveArray();
+            #endregion
 
+            #region 创建坐标点
             #region//创建三维轮廓线坐标点,用于部分1与部分5的拉伸
             XYZ pzz0 = new XYZ(0, 0, 400);
             XYZ pzz1 = new XYZ(Windows_Canvas.b_zd_zl_out[0], 0, z_coordinate_transformation.z_zd_zl_out[0] + 400);
@@ -162,7 +165,9 @@ namespace Bridge_design
             XYZ pky11 = new XYZ(-Windows_Canvas.b_kz_zl_in[7], l1 + l2, z_coordinate_transformation.z_kz_zl_in[7] + 400);
             XYZ pky12 = new XYZ(0, l1 + l2, z_coordinate_transformation.z_zd_zl_in[7] + 400);
             #endregion
+            #endregion
 
+            #region 创建轮廓线
             #region//创建部分1左半边轮廓线
             Curve bf1_outline_z_1 = Autodesk.Revit.DB.Line.CreateBound(pzz0,pzz1);
             Curve bf1_outline_z_2 = Autodesk.Revit.DB.Line.CreateBound(pzz1,pzz2);
@@ -258,7 +263,9 @@ namespace Bridge_design
             Curve bf2_outline_y_12 = Autodesk.Revit.DB.Line.CreateBound(pky11, pky12);
             Curve bf2_outline_y_13 = Autodesk.Revit.DB.Line.CreateBound(pky12, pky0);
             #endregion
+            #endregion
 
+            #region 连接轮廓线
             #region//连接部分1左半边轮廓线
             bufen1_z.Append(bf1_outline_z_1);
             bufen1_z.Append(bf1_outline_z_2);
@@ -360,7 +367,9 @@ namespace Bridge_design
             bufen2_y.Append(bf2_outline_y_13);
             bubufen2_y.Append(bufen2_y);
             #endregion
+            #endregion
 
+            #region 定义各部分元素名称
             Element Model1_z = null;
             Element Model1_y = null;
             Element Model2_z = null;
@@ -371,7 +380,9 @@ namespace Bridge_design
             Element Model4_y = null;
             Element Model5_z = null;
             Element Model5_y = null;
+            #endregion
 
+            #region 主梁的拉伸和融合
             //新建事务，创建主梁部分拉伸体
             using (Transaction transaction1 = new Transaction(familyDoc))
             {
@@ -405,6 +416,7 @@ namespace Bridge_design
                 ElementTransformUtils.MoveElement(familyDoc, Model4_y.Id, transPointModel4);
                 transaction2.Commit();
             }
+            #endregion
 
             //using (Transaction transaction3 = new Transaction(familyDoc))
             //{
@@ -432,6 +444,10 @@ namespace Bridge_design
             CurveArrArray Transversebeam_z = app.Create.NewCurveArrArray();
             CurveArray Transverse_z = app.Create.NewCurveArray();
 
+            //定义右侧横隔梁
+            CurveArrArray Transversebeam_y = app.Create.NewCurveArrArray();
+            CurveArray Transverse_y = app.Create.NewCurveArray();
+
             //左侧横隔梁轮廓线
             Curve Tb_outline_z1 = Autodesk.Revit.DB.Line.CreateBound(hz1, hz2);
             Curve Tb_outline_z2 = Autodesk.Revit.DB.Line.CreateBound(hz2, hz3);
@@ -452,13 +468,15 @@ namespace Bridge_design
             Transverse_z.Append(Tb_outline_z3);
             Transverse_z.Append(Tb_outline_z4);
             Transverse_z.Append(Tb_outline_z5);
+            Transversebeam_z.Append(Transverse_z);
 
             //连接右侧横隔梁轮廓线
-            Transverse_z.Append(Tb_outline_y1);
-            Transverse_z.Append(Tb_outline_y2);
-            Transverse_z.Append(Tb_outline_y3);
-            Transverse_z.Append(Tb_outline_y4);
-            Transverse_z.Append(Tb_outline_y5);
+            Transverse_y.Append(Tb_outline_y1);
+            Transverse_y.Append(Tb_outline_y2);
+            Transverse_y.Append(Tb_outline_y3);
+            Transverse_y.Append(Tb_outline_y4);
+            Transverse_y.Append(Tb_outline_y5);
+            Transversebeam_y.Append(Transverse_y);
 
             #endregion
 
