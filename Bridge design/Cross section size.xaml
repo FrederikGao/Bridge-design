@@ -1,0 +1,133 @@
+﻿<Window x:Class="Bridge_design.Cross_section_size"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Bridge_design"
+             mc:Ignorable="d" Height="640" Width="1234.667">
+    <Grid Margin="10,0,3,-2.333" RenderTransformOrigin="0.495,0.485">
+        <Button Name="Bridge_modeling" Content="一键建模" HorizontalAlignment="Left" Height="31" Margin="417,572,0,0" VerticalAlignment="Top" Width="148" Click="Bridge_modeling_Click"/>
+        <TabControl HorizontalAlignment="Left" Height="540" Margin="10,9,0,0" VerticalAlignment="Top" Width="1132">
+            <TabItem Header="横断面尺寸输入">
+                <Grid Background="White" Margin="10,3,0,-2" HorizontalAlignment="Left" Width="1110">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130*"/>
+                        <ColumnDefinition Width="863*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="跨中截面尺寸输入" HorizontalAlignment="Left" Margin="42,9,0,0" VerticalAlignment="Top" Height="23" Width="113" Grid.ColumnSpan="2"/>
+                    <Label Content="b1=" HorizontalAlignment="Left" Margin="42,33,0,0" VerticalAlignment="Top" Height="24"/>
+                    <Label Content="b2=" HorizontalAlignment="Left" Margin="42,58,0,0" VerticalAlignment="Top" Height="24"/>
+                    <Label Content="b3=" HorizontalAlignment="Left" Margin="42,83,0,0" VerticalAlignment="Top" Height="24"/>
+                    <Label Content="b4=" HorizontalAlignment="Left" Margin="42,108,0,0" VerticalAlignment="Top" Height="24"/>
+                    <Label Content="b5=" HorizontalAlignment="Left" Margin="42,133,0,0" VerticalAlignment="Top" Height="24"/>
+                    <Label Content="b6=" HorizontalAlignment="Left" Margin="42,159,0,0" VerticalAlignment="Top" Height="24"/>
+                    <Label Content="b7=" HorizontalAlignment="Left" Margin="42,183,0,0" VerticalAlignment="Top" Height="24"/>
+                    <Label Content="b8=" HorizontalAlignment="Left" Margin="42,209,0,0" VerticalAlignment="Top" Height="24"/>
+                    <Label Content="b9=" HorizontalAlignment="Left" Margin="42,234,0,0" VerticalAlignment="Top" Height="24"/>
+                    <Label Content="b10=" HorizontalAlignment="Left" Margin="35,259,0,0" VerticalAlignment="Top" Height="24"/>
+                    <Label Content="b11=" HorizontalAlignment="Left" Margin="35,284,0,0" VerticalAlignment="Top" Height="24"/>
+                    <Label Content="b12=" HorizontalAlignment="Left" Margin="35,309,0,0" VerticalAlignment="Top" Height="24"/>
+                    <Label Content="h1=" HorizontalAlignment="Left" Margin="7,34,0,0" VerticalAlignment="Top" Height="24" Grid.Column="1"/>
+                    <Label Content="h2=" HorizontalAlignment="Left" Margin="7,59,0,0" VerticalAlignment="Top" Height="24" Grid.Column="1"/>
+                    <Label Content="h3=" HorizontalAlignment="Left" Margin="7,84,0,0" VerticalAlignment="Top" Height="24" Grid.Column="1"/>
+                    <Label Content="h4=" HorizontalAlignment="Left" Margin="7,109,0,0" VerticalAlignment="Top" Height="24" Grid.Column="1"/>
+                    <Label Content="h5=" HorizontalAlignment="Left" Margin="7,134,0,0" VerticalAlignment="Top" Height="24" Grid.Column="1"/>
+                    <Label Content="h6=" HorizontalAlignment="Left" Margin="7,159,0,0" VerticalAlignment="Top" Height="24" Grid.Column="1"/>
+                    <Label Content="h7=" HorizontalAlignment="Left" Margin="7,184,0,0" VerticalAlignment="Top" Height="24" Grid.Column="1"/>
+                    <Label Content="h8=" HorizontalAlignment="Left" Margin="7,209,0,0" VerticalAlignment="Top" Height="24" Grid.Column="1"/>
+                    <TextBox Name="aa1" Tag="aa" HorizontalAlignment="Left" Margin="72,39,0,0" TextWrapping="Wrap" Text="17.5" VerticalAlignment="Top" Width="61" Grid.ColumnSpan="2"/>
+                    <TextBox Name="aa2" Tag="aa" HorizontalAlignment="Left" Margin="72,64,0,0" TextWrapping="Wrap" Text="19.2" VerticalAlignment="Top" Width="61" Grid.ColumnSpan="2"/>
+                    <TextBox Name="aa3" Tag="aa" HorizontalAlignment="Left" Margin="72,89,0,0" TextWrapping="Wrap" Text="33" VerticalAlignment="Top" Width="61" Grid.ColumnSpan="2"/>
+                    <TextBox Name="aa4" Tag="aa" HorizontalAlignment="Left" Margin="72,114,0,0" TextWrapping="Wrap" Text="15" VerticalAlignment="Top" Width="61" Grid.ColumnSpan="2"/>
+                    <TextBox Name="aa5" Tag="aa" HorizontalAlignment="Left" Margin="72,139,0,0" TextWrapping="Wrap" Text="113" VerticalAlignment="Top" Width="61" Grid.ColumnSpan="2"/>
+                    <TextBox Name="aa6" Tag="aa" HorizontalAlignment="Left" Margin="72,164,0,0" TextWrapping="Wrap" Text="67" VerticalAlignment="Top" Width="61" Grid.ColumnSpan="2"/>
+                    <TextBox Name="aa7" Tag="aa" HorizontalAlignment="Left" Margin="72,189,0,0" TextWrapping="Wrap" Text="28" VerticalAlignment="Top" Width="61" Grid.ColumnSpan="2"/>
+                    <TextBox Name="aa8" Tag="aa" HorizontalAlignment="Left" Margin="72,214,0,0" TextWrapping="Wrap" Text="16" VerticalAlignment="Top" Width="61" Grid.ColumnSpan="2"/>
+                    <TextBox Name="aa9" Tag="aa" HorizontalAlignment="Left" Margin="72,239,0,0" TextWrapping="Wrap" Text="31.2" VerticalAlignment="Top" Width="61" Grid.ColumnSpan="2"/>
+                    <TextBox Name="aa10" Tag="aa" HorizontalAlignment="Left" Margin="72,264,0,0" TextWrapping="Wrap" Text="31.2" VerticalAlignment="Top" Width="61" Grid.ColumnSpan="2"/>
+                    <TextBox Name="aa11" Tag="aa" HorizontalAlignment="Left" Margin="72,289,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="61" Grid.ColumnSpan="2"/>
+                    <TextBox Name="aa12" Tag="aa" HorizontalAlignment="Left" Margin="72,314,0,0" TextWrapping="Wrap" Text="17" VerticalAlignment="Top" Width="61" Grid.ColumnSpan="2"/>
+                    <TextBox Name="bb1" HorizontalAlignment="Left" Margin="35,39,0,0" TextWrapping="Wrap" Text="15" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
+                    <TextBox Name="bb2" HorizontalAlignment="Left" Margin="35,64,0,0" TextWrapping="Wrap" Text="6.5" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
+                    <TextBox Name="bb3" HorizontalAlignment="Left" Margin="35,89,0,0" TextWrapping="Wrap" Text="110" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
+                    <TextBox Name="bb4" HorizontalAlignment="Left" Margin="35,114,0,0" TextWrapping="Wrap" Text="9.5" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
+                    <TextBox Name="bb5" HorizontalAlignment="Left" Margin="35,139,0,0" TextWrapping="Wrap" Text="18" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
+                    <TextBox Name="bb6" HorizontalAlignment="Left" Margin="35,164,0,0" TextWrapping="Wrap" Text="7" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
+                    <TextBox Name="bb7" HorizontalAlignment="Left" Margin="35,189,0,0" TextWrapping="Wrap" Text="13.9" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
+                    <TextBox Name="bb8" HorizontalAlignment="Left" Margin="35,214,0,0" TextWrapping="Wrap" Text="15" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
+                    <Canvas Name="mainPane1" Height="193" Margin="0,40,497,0" VerticalAlignment="Top" Grid.Column="1" HorizontalAlignment="Right" Width="201"/>
+                    <Canvas Name="mainPane2" HorizontalAlignment="Left" Height="193" Margin="249,266,0,0" VerticalAlignment="Top" Width="201" Grid.Column="1"/>
+                    <Label Content="跨中中梁尺寸拟定示意图" HorizontalAlignment="Left" Margin="166,213,0,0" VerticalAlignment="Top" Height="24" Width="145" Grid.Column="1"/>
+                    <Label Content="跨中边梁尺寸拟定示意图" HorizontalAlignment="Left" Margin="166,441,0,0" VerticalAlignment="Top" Height="24" Width="145" Grid.Column="1"/>
+                    <Label Content="跨中尺寸标注示意图" HorizontalAlignment="Left" Margin="82,478,0,0" VerticalAlignment="Top" Height="24" Width="119" Grid.ColumnSpan="2"/>
+
+
+                    <Label Content="支点截面尺寸输入" HorizontalAlignment="Left" Margin="416,9,0,0" VerticalAlignment="Top" Height="23" Width="113" Grid.Column="1"/>
+                    <Label Content="b1=" HorizontalAlignment="Left" Margin="416,32,0,0" VerticalAlignment="Top" Height="24" Grid.Column="1"/>
+                    <Label Content="b2=" HorizontalAlignment="Left" Margin="416,57,0,0" VerticalAlignment="Top" Height="24" Grid.Column="1"/>
+                    <Label Content="b3=" HorizontalAlignment="Left" Margin="416,82,0,0" VerticalAlignment="Top" Height="24" Grid.Column="1"/>
+                    <Label Content="b4=" HorizontalAlignment="Left" Margin="416,107,0,0" VerticalAlignment="Top" Height="24" Grid.Column="1"/>
+                    <Label Content="b5=" HorizontalAlignment="Left" Margin="416,132,0,0" VerticalAlignment="Top" Height="24" Grid.Column="1"/>
+                    <Label Content="b6=" HorizontalAlignment="Left" Margin="416,157,0,0" VerticalAlignment="Top" Height="24" Grid.Column="1"/>
+                    <Label Content="b7=" HorizontalAlignment="Left" Margin="416,182,0,0" VerticalAlignment="Top" Height="24" Grid.Column="1"/>
+                    <Label Content="b8=" HorizontalAlignment="Left" Margin="416,207,0,0" VerticalAlignment="Top" Height="24" Grid.Column="1"/>
+                    <Label Content="b9=" HorizontalAlignment="Left" Margin="416,232,0,0" VerticalAlignment="Top" Height="24" Grid.Column="1"/>
+                    <Label Content="b10=" HorizontalAlignment="Left" Margin="409,258,0,0" VerticalAlignment="Top" Height="24" Grid.Column="1"/>
+                    <Label Content="b11=" HorizontalAlignment="Left" Margin="409,284,0,0" VerticalAlignment="Top" Height="24" Grid.Column="1"/>
+                    <Label Content="b12=" HorizontalAlignment="Left" Margin="409,309,0,0" VerticalAlignment="Top" Height="24" Grid.Column="1"/>
+                    <Label Content="h1=" HorizontalAlignment="Left" Margin="511,33,0,0" VerticalAlignment="Top" Height="24" Grid.Column="1"/>
+                    <Label Content="h2=" HorizontalAlignment="Left" Margin="511,58,0,0" VerticalAlignment="Top" Height="24" Grid.Column="1"/>
+                    <Label Content="h3=" HorizontalAlignment="Left" Margin="511,83,0,0" VerticalAlignment="Top" Height="24" Grid.Column="1"/>
+                    <Label Content="h4=" HorizontalAlignment="Left" Margin="511,108,0,0" VerticalAlignment="Top" Height="24" Grid.Column="1"/>
+                    <Label Content="h5=" HorizontalAlignment="Left" Margin="511,133,0,0" VerticalAlignment="Top" Height="24" Grid.Column="1"/>
+                    <Label Content="h6=" HorizontalAlignment="Left" Margin="511,158,0,0" VerticalAlignment="Top" Height="24" Grid.Column="1"/>
+                    <Label Content="h7=" HorizontalAlignment="Left" Margin="511,183,0,0" VerticalAlignment="Top" Height="24" Grid.Column="1"/>
+                    <Label Content="h8=" HorizontalAlignment="Left" Margin="511,208,0,0" VerticalAlignment="Top" Height="24" Grid.Column="1"/>
+                    <TextBox Name="aaa1" HorizontalAlignment="Left" Margin="446,39,0,0" TextWrapping="Wrap" Text="17.5" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
+                    <TextBox Name="aaa2" HorizontalAlignment="Left" Margin="446,64,0,0" TextWrapping="Wrap" Text="19.2" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
+                    <TextBox Name="aaa3" HorizontalAlignment="Left" Margin="446,89,0,0" TextWrapping="Wrap" Text="33" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
+                    <TextBox Name="aaa4" HorizontalAlignment="Left" Margin="446,114,0,0" TextWrapping="Wrap" Text="15" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
+                    <TextBox Name="aaa5" HorizontalAlignment="Left" Margin="446,139,0,0" TextWrapping="Wrap" Text="113" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
+                    <TextBox Name="aaa6" HorizontalAlignment="Left" Margin="446,164,0,0" TextWrapping="Wrap" Text="67" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
+                    <TextBox Name="aaa7" HorizontalAlignment="Left" Margin="446,189,0,0" TextWrapping="Wrap" Text="28" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
+                    <TextBox Name="aaa8" HorizontalAlignment="Left" Margin="446,214,0,0" TextWrapping="Wrap" Text="16" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
+                    <TextBox Name="aaa9" HorizontalAlignment="Left" Margin="446,239,0,0" TextWrapping="Wrap" Text="31.2" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
+                    <TextBox Name="aaa10" HorizontalAlignment="Left" Margin="446,264,0,0" TextWrapping="Wrap" Text="31.2" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
+                    <TextBox Name="aaa11" HorizontalAlignment="Left" Margin="446,289,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
+                    <TextBox Name="aaa12" HorizontalAlignment="Left" Margin="446,314,0,0" TextWrapping="Wrap" Text="17" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
+                    <TextBox Name="bbb1" HorizontalAlignment="Left" Margin="539,39,0,0" TextWrapping="Wrap" Text="15" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
+                    <TextBox Name="bbb2" HorizontalAlignment="Left" Margin="539,64,0,0" TextWrapping="Wrap" Text="6.5" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
+                    <TextBox Name="bbb3" HorizontalAlignment="Left" Margin="539,89,0,0" TextWrapping="Wrap" Text="110" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
+                    <TextBox Name="bbb4" HorizontalAlignment="Left" Margin="539,114,0,0" TextWrapping="Wrap" Text="9.5" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
+                    <TextBox Name="bbb5" HorizontalAlignment="Left" Margin="539,139,0,0" TextWrapping="Wrap" Text="18" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
+                    <TextBox Name="bbb6" HorizontalAlignment="Left" Margin="539,164,0,0" TextWrapping="Wrap" Text="7" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
+                    <TextBox Name="bbb7" HorizontalAlignment="Left" Margin="539,189,0,0" TextWrapping="Wrap" Text="13.9" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
+                    <TextBox Name="bbb8" HorizontalAlignment="Left" Margin="539,214,0,0" TextWrapping="Wrap" Text="15" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
+                    <Canvas Name="mainPane3" HorizontalAlignment="Left" Height="193" Margin="751,38,0,0" VerticalAlignment="Top" Width="177" Grid.Column="1"/>
+                    <Canvas Name="mainPane4" HorizontalAlignment="Left" Height="193" Margin="751,266,0,0" VerticalAlignment="Top" Width="177" Grid.Column="1"/>
+                    <Label Content="支点中梁尺寸拟定示意图" HorizontalAlignment="Left" Margin="670,213,0,0" VerticalAlignment="Top" Height="24" Width="145" Grid.Column="1"/>
+                    <Label Content="支点边梁尺寸拟定示意图" HorizontalAlignment="Left" Margin="670,441,0,0" VerticalAlignment="Top" Height="24" Width="145" Grid.Column="1"/>
+
+                    <Label Content="支点尺寸标注示意图" HorizontalAlignment="Left" Margin="469,478,0,0" VerticalAlignment="Top" Height="24" Width="119" Grid.Column="1"/>
+                    <Image Source="E:\Bridge design(2019.01.05)\Bridge design\zhongliang.jpg" HorizontalAlignment="Left" Height="146" Margin="42,338,0,0" VerticalAlignment="Top" Width="206" Grid.ColumnSpan="2"/>
+                    <Image Source="E:\Bridge design(2019.01.05)\Bridge design\zhongliang.jpg" HorizontalAlignment="Left" Height="146" Margin="421,338,0,0" VerticalAlignment="Top" Width="206" Grid.Column="1"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="纵立面尺寸输入">
+                <Grid Background="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="17*"/>
+                        <ColumnDefinition Width="314*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="纵立面尺寸输入" HorizontalAlignment="Left" Margin="42,9,0,0" VerticalAlignment="Top" Height="23" Width="113" Grid.ColumnSpan="2"/>
+                    <Label Content="L1=" HorizontalAlignment="Left" Margin="53,34,0,0" VerticalAlignment="Top" Height="24" Grid.ColumnSpan="2"/>
+                    <TextBox Name="l1" Tag="" HorizontalAlignment="Left" Margin="22,38,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
+                    <Label Content="L2=" HorizontalAlignment="Left" Margin="53,59,0,0" VerticalAlignment="Top" Height="24" Grid.ColumnSpan="2"/>
+                    <TextBox Name="l2" Tag="" HorizontalAlignment="Left" Margin="22,63,0,0" TextWrapping="Wrap" Text="150" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
+                    <Label Content="L3=" HorizontalAlignment="Left" Margin="53,84,0,0" VerticalAlignment="Top" Height="24" Grid.ColumnSpan="2"/>
+                    <TextBox Name="l3" Tag="" HorizontalAlignment="Left" Margin="22,88,0,0" TextWrapping="Wrap" Text="2600" VerticalAlignment="Top" Width="61" Grid.Column="1"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
